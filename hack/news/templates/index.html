@@ -1,0 +1,427 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DigitalIndia</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/animate/animate.min.css'%}" rel="stylesheet">
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+  <link href="{% static 'lib/magnific-popup/magnific-popup.css'%}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto">LOGO</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">News Feed</a></li>
+          <li><a href="#features">Nearby Places</a></li>
+          <li><a href="#more-features">Topic</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Emergency</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-text">
+      <h2>Welcome to Digital Citizen</h2>
+      <p>A project initiated by TechBuddies</p>
+    </div>
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about" class="section-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">News Feed</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6 content wow fadeInRight">
+            <div align="center" >
+              {% for i in images %}
+              <img src="{{i}}"" alt="broken" width="300px" height="300px" margin="auto">
+              {% endfor %}
+            </div>
+            <div align="left" margin="10%">
+              <ul>
+                {% for i in articles %}
+                <li>{{i}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Product Featuress Section
+    ============================-->
+    <section id="features">
+      <div class="container">
+
+          <div class="row">
+
+              <div class="col-lg-8 offset-lg-4">
+                <div class="section-header wow fadeIn" data-wow-duration="1s">
+                  <h3 class="section-title">Nearby Places</h3>
+                  <span class="section-divider"></span>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-5 features-img">
+                <div id="map"></div>
+              </div>
+              <div class="col-lg-8 col-md-7 ">
+                <div class="row">
+    
+                  <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                    <h4 class="title"><a href="">Hospital</a></h4>
+                    <p class="description"></p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
+                    <h4 class="title"><a href="">Police Station</a></h4>
+                    <p class="description"></p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
+                    <h4 class="title"><a href="">Fire Station</a></h4>
+                    <p class="description"></p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
+                    <h4 class="title"><a href="">Blood Bank</a></h4>
+                    <p class="description"></p>
+                  </div>
+                </div>
+    
+              </div>
+    
+            </div>
+    
+          </div>
+
+    </section><!-- #features -->
+
+    <!--==========================
+      More Features Section
+    ============================-->
+    <section id="more-features" class="section-bg">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">Topic</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">We provide the Best solutions to the Following Disaster</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
+              <h4 class="title"><a href="">Accident</a></h4>
+              <p class="description">Immediately after the accident stop the car as soon as possible turn off the engine & switch the hazard lights on.
+                Check for any injuries to yourself or your passengers.
+                Call the police and an ambulance immediately if anyone is hurt or if the road is blocked & do not move seriously injured victims unless they are in immediate danger.
+                Try to remain as calm as possible – its normal to be shaken after an accident, take a few deep breaths and try to take stock of the situation the best you can. And don't lose your temper.
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <h4 class="title"><a href="">Natural Disasters</a></h4>
+              <p class="description">If indoors, stay there and take cover under a table, desk, or other sturdy furniture & face away from windows and glass doors.
+                Protect your head and body from falling or flying objects.
+                Know exit routes if in a commercial building. Take cover and don't move until the shaking stops.
+                If driving, stop safely as soon as possible & do not stop the vehicle if you are under overpasses or bridges. Stay inside your vehicle until the shaking stops.
+                Stay in the vehicle if downed power lines have fallen across it. Do not touch metal. Wait for help.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
+              <h4 class="title"><a href="">Violence</a></h4>
+              <p class="description">The guidance says that people should run to a place of safety if there is a safe route, leaving belongings behind and insisting others go with them.
+                If there is nowhere to go, then they should hide by barricading themselves in and turn their phones to silent.
+                If the exits are blocked, it is important to protect yourself from falling debris by taking cover under a table or some other form of shelter.
+                if you cant escape:-
+                Avoid gas lines, kitchens or any other fire hazards and do not take any lifts.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <h4 class="title"><a href="">Terroist Attack</a></h4>
+              <p class="description">If you find yourself caught up in a demonstration keep to the edge of the crowd where it is safer.
+                At the first opportunity break away and seek refuge in a nearby building or find a suitable doorway or alley and stay there until the crowd passes.
+                When leaving the fringe of the demonstration just walk away – don't run as this will draw attention to you.
+                If you are caught up in the crowd, stay clear of glass shop fronts, stay on your feet and move with the flow.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- #more-features -->
+
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">Frequently Asked Questions</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">You can get the answers to the commanly asked question here</p>
+        </div>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">If there is a disaster, what am I expected to do? <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+               Secure your family first; then follow procedures or instructions established by your Department for reporting to your normal work location or designated alternate staging area. Notify your supervisor of your location and status, if possible. Register your status online at Safe and Well, a site managed by the American Red Cross. Family, friends, co-workers and your supervisor can then log in and check to see if you are all right.
+
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Who is responsible for cleaning up?<i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Unfortunately, natural disasters have a tendency of disrupting life in very tangible ways. Wind, water, and other elements can make a pretty big mess, but it’s not always up to you to clean up the destruction they’ve caused. Check with your local sanitation department or housing association to see if the job is one that you can opt out of. There may be legal or safety reasons why you shouldn’t touch that fallen tree.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">Where can you go for help? <i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                You can visit our website at anytime.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">How long does it take to get everything back to normal? <i class="ion-android-remove"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">How to react in a similar situation?<i class="ion-android-remove"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed"> Who will compensate for the monetory loss and how? <i class="ion-android-remove"></i></a>
+            <div id="faq6" class="collapse" data-parent="#faq-list">
+              <p>
+               
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- #faq -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <section id="contact">
+        <div class="section-header">
+          <h3 class="section-title">Emergency Contact Numbers</h3>
+          <span class="section-divider"></span>
+        </div>
+      </section>
+      <div class="emergency">
+            <div class="col-lg-3 col-md-4">
+              <i class="ion-ios-telephone-outline">    Police Service</i>
+              <p>  100</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <i class="ion-ios-telephone-outline">    Ambulance</i>
+              <p>  102</p>
+            </div> 
+            <div class="col-lg-3 col-md-4">
+              <i class="ion-ios-telephone-outline">    Fire Service</i>
+              <p>  101</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <i class="ion-ios-telephone-outline">    Disaster Management</i>
+              <p>  108</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <i class="ion-ios-telephone-outline">    Women's Helpline</i>
+              <p>  181</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <i class="ion-ios-telephone-outline">    AIDS Helpline</i>
+              <p>  1097</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <i class="ion-ios-telephone-outline">    Child Abuse Hotline</i>
+              <p>  1098</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <i class="ion-ios-telephone-outline">    Air Ambulance</i>
+              <p> +91 9540161344</p>
+            </div>
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+ 
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/magnific-popup/magnific-popup.min.js' %}"></script>
+
+  <!-- Google Map Api
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+
+  <script>
+
+    var temp_lat = '';
+    var temp_lng = '';
+    var map;
+    var infowindow;
+    var nearby = null;
+    getLocation();
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+                temp_lat = 0.0; //set default lat value
+                temp_lng = 0.0; //set default lng value
+        }
+    }
+
+    function showPosition(position) {
+        temp_lat = position.coords.latitude;
+        temp_lng = position.coords.longitude;
+        initMap(nearby);
+    }
+
+
+    function initMap(nearby) 
+    {
+    var pyrmont = {lat: temp_lat, lng: temp_lng};
+    map = new google.maps.Map(document.getElementById('map'),
+    { center: pyrmont, 
+      zoom: 15 }); 
+    infowindow = new google.maps.InfoWindow(); 
+    var service = new google.maps.places.PlacesService(map);  
+    service.nearbySearch(
+    { location: pyrmont, 
+      radius: 500, 
+      type: [nearby] }, callback); } 
+    function callback(results, status) { 
+    if (status === google.maps.places.PlacesServiceStatus.OK) { 
+      for (var i = 0; i < results.length; i++) { 
+        console.log(results[i]);
+        createMarker(results[i]);
+      } 
+    } 
+  } 
+    
+    function createMarker(place) {
+        var placeLoc = place.geometry.location; 
+        var marker = new google.maps.Marker({ map: map, position: place.geometry.location }); 
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name); 
+          infowindow.open(map, this); 
+        }); 
+    }
+
+google.maps.addDomListener(window, 'load', initialize);
+
+
+$('"#hosp').on('click', function() {
+  this.initMap('hospital');
+});
+
+$('"#pol').on('click', function() {
+  nearby = 'police station';
+  initMap(nearby);
+});
+
+$('"#fire').on('click', function() {
+  nearby = 'fire station';
+  initMap(nearby);
+});
+
+      
+  </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYzXj5wF4L6mChyyc5xwfb2QT1QEZ9VN8&callback=initMap"
+type="text/javascript"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
